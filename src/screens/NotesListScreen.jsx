@@ -21,17 +21,15 @@ export default function NotesListScreen({ route, navigation }) {
       await executeSql("DELETE FROM notes WHERE id = ?", [id]);
       recuperaListaNotas();
     };
-
     Alert.alert(
-      "Remover item da lista",
-      `Você confirma a exclusão deste item?`,
+      "Apagar Notas",
+      `Você tem certeza que quer apagar essas notas?`,
       [
         {
-          text: "Cancelar",
-          onPress: () => console.log("Cancel Pressed"),
+          text: "Não",
           style: "cancel",
         },
-        { text: "OK", onPress: _runDeleteQuery },
+        { text: "Sim", onPress: _runDeleteQuery },
       ],
       { cancelable: false }
     );
@@ -46,19 +44,17 @@ export default function NotesListScreen({ route, navigation }) {
       recuperaListaNotas();
     };
     Alert.alert(
-      "Remover item da lista",
-      `Você confirma a exclusão deste item?`,
+      "Apagar Notas",
+      `Você tem certeza que quer apagar essas notas?`,
       [
         {
-          text: "Cancelar",
-          onPress: () => console.log("Cancel Pressed"),
+          text: "Não",
           style: "cancel",
         },
-        { text: "OK", onPress: _runDeleteQuery },
+        { text: "Sim", onPress: _runDeleteQuery },
       ],
       { cancelable: false }
     );
-    
   }
 
   useEffect(() => {

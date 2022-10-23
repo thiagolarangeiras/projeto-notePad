@@ -3,7 +3,7 @@ import { StyleSheet, Keyboard, View, Text } from "react-native";
 import { TextInput, Button } from "react-native-paper";
 import { Formik } from "formik";
 import * as Yup from "yup";
-import { executeSql } from "../../db";
+import { executeSql } from "../db";
 
 import TextInputError from "../components/TextInputError";
 

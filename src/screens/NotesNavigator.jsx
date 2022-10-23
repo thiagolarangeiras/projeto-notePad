@@ -9,7 +9,6 @@ import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 
 import NotesListScreen from "./NotesListScreen";
 import NotesAddScreen from "./NotesAddScreen";
-import UserConfigScreen from "./UserConfigScreen";
 
 const StackNotes = createNativeStackNavigator();
 
@@ -28,13 +27,6 @@ export default function NotesNavigator() {
         component={NotesAddScreen}
         options={{
           title: "Adicionando Nota",
-        }}
-      />
-      <StackNotes.Screen
-        name="UserConfig"
-        component={UserConfigScreen}
-        options={{
-          title: "Configurações",
         }}
       />
     </StackNotes.Navigator>

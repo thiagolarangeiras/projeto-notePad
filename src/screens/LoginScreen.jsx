@@ -1,4 +1,4 @@
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text,Alert } from "react-native";
 import { Button } from "react-native-paper";
 import { Formik } from "formik";
 import * as Yup from "yup";
@@ -20,9 +20,19 @@ export default function LoginScreen({ navigation }) {
         navigation.navigate("NotesNavigator");
         return true;
       }
-      alert("Senha ou usuario incorretos!");
+      Alert.alert(
+        "Atenção",
+        "Senha incorreta!",
+        [{ text: "Ok", style: "cancel"}],
+        { cancelable: false }
+      );
     } catch (err){
-      alert("Erro ao fazer Login!");
+      Alert.alert(
+        "Atenção",
+        "usuario não existe!",
+        [{ text: "Ok", style: "cancel"}],
+        { cancelable: false }
+      );
     }
   }
   

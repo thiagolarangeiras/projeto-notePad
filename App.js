@@ -7,9 +7,9 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 
-import LoginScreen from "./screens/login/LoginScreen";
-import SinginScreen from "./screens/login/SinginScreen";
-import Notesnavigator from "./screens/lista/NotesNavigator"
+import LoginScreen from "./src/screens/LoginScreen";
+import SinginScreen from "./src/screens/SinginScreen";
+import Notesnavigator from "./src/screens/NotesNavigator"
 
 const StackLogin = createNativeStackNavigator();
 

@@ -27,7 +27,7 @@ export default function NotasCard({ note, onPress, onLongPress, notaDeletar, set
   }
   return (
     <Card style={styles.content} onPress={onPress} onLongPress={onLongPress} mode="outlined">
-    <Card.Title title={`${note.id} - ${note.title}`} left={CustomCheckBox} />
+    <Card.Title title={`${note.title}`} left={CustomCheckBox} />
     <Card.Content>
       <Paragraph>{note.description.replace(/(\r\n|\n|\r)/gm, " ").substring(0,50) + " ..."}</Paragraph>
     </Card.Content>
